@@ -20,13 +20,13 @@ function Home() {
         <section className='images'>
         <ul>
             <li >
-                <Card imageUrl={vaca1} title='Image1' body='lorem'  />
+                <Card imageUrl={vaca1} title='Image1' body='Venice, Italy'  />
             </li>
             <li >
-                <Card imageUrl={vaca2} title='Image2' body='stacy'  />
+                <Card imageUrl={vaca2} title='Image2' body='Fiji, Japan'  />
             </li>
             <li >
-                <Card imageUrl={vaca3} title='Image3' body='voren'  />
+                <Card imageUrl={vaca3} title='Image3' body='Toronto, Canada'  />
             </li>
             
         </ul>
