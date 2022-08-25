@@ -14,7 +14,7 @@ function Home() {
                 <h1>Let us inspire you</h1>
                 <br/>
                 <br/>
-                <a className="plan_link" href=""> Plan your trip </a>
+                <a className="plan_link" href="/Search"> Plan your trip </a>
             </div>
             </section>
         <section className='images'>
