@@ -6,6 +6,7 @@ const Search = () => {
 
     const [loc, setLoc] = useState("")
     const [locations, setLocations] = useState(null)
+    const [isLoading, setLoading] = useState(false)
     const apikey = "5ae2e3f221c38a28845f05b60b1d4a89c1550e9b61ed8f906938626f"
    // const [coors, setCoors] = useState({'lat':"", 'lon':""})
     var name = ""
@@ -26,9 +27,6 @@ const Search = () => {
         //setReq(loc)
         name = loc
         
-        
-
-
 
        spotsQuery = "http://api.opentripmap.com/0.1/en/places/radius?radius=10000&apikey="+apikey
        // setCoord("http://api.opentripmap.com/0.1/en/places/geoname?apikey="+apikey+"&name="+name )
@@ -36,6 +34,7 @@ const Search = () => {
         //setCoors({'lat': 4, 'lon': -7} )
 
        
+        setLoading(true)
 
         fetch(coordQuery).then(res=> res.json()).then(result => [result["lat"], result["lon"]])
         .then( points => {
@@ -45,7 +44,7 @@ const Search = () => {
                 
                 })
 
-        } )
+        } ).then(setLoading(false))
 
         // fetch(coordQuery)
         //     .then(res => res.json())
@@ -64,6 +63,7 @@ const Search = () => {
                 <button type="Submit">Submit</button>
             </form >
 
+            { isLoading && <h1>Loading...</h1>}
             { locations && <ol>
 
                 {

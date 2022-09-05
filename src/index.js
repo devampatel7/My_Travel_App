@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './views/Navbar'
 import Home from './views/Home'
-import Search from './views/Search'
+import Search from './views/SearchViews/Search'
 import Footer from './views/Footer'
 
 ReactDOM.render(
